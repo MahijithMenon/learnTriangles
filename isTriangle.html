@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/output.css" rel="stylesheet">
     <title>Fun With Triangles</title>
     
 </head>
-<body>
+<body class="bg-neutral-700">
     <div>
 
-        <nav>
-            <ul>
+        <nav class="mb-4 ">
+            <ul class="flex flex-row justify-between">
                 <a href="/isTriangle.html"><li>is Triangle</li></a>
                <a href="/quiz.html"><li>Quiz</li></a>
                <a href="/hypotenuse.html"><li>Hypotenuse</li>
                 <a href="/index.html"><li>Area of Triangle</li></a>
             </ul>
         </nav>
-        <div>
+        <div class="flex flex-col border border-solid w-2/3 m-auto">
             <h1>Angles of Triangles</h1>
             <label for="angle1">Angel1</label>
             <input type="number" id="angle1">
@@ -26,8 +27,8 @@
             <input type="number" id="angle2">
             <label for="angle3">Angel3</label>
             <input type="number" id="angle3">
-            <button onclick=isTriangle()>is Triangle?</button>
-        <p id="result"></p>
+            <button  class="bg-slate-400 border-solid w-1/5 my-5 m-auto p-9" id="calculate" onclick=isTriangle()>is Triangle?</button>
+         <p id="result"></p>
         </div>
     </div>
     <script>
