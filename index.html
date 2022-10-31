@@ -35,13 +35,17 @@
         const thirdInput=document.getElementById('third')
         const calculate=document.getElementById('calculate');
         calculate.addEventListener('click',function(){
+            if(firstInput.value===""|| secondInput.value===""||thirdInput.value===""){
+                alert("Please Enter the value");
+            }
+            else{
             a=Number(firstInput.value);
         b=Number(secondInput.value);
         c=Number(thirdInput.value);
         let s=(a+b+c)/2;
         let ar=Math.sqrt(s*(s-a)*(s-b)*(s-c));
         output.innerText="Area of the given sides is"+ar.toFixed(2);
-        })
+        }})
         
     </script>
 </body>

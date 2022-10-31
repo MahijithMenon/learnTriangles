@@ -30,11 +30,15 @@
         const secondInput=document.getElementById('height')
         const calculate=document.getElementById('calculate');
         calculate.addEventListener('click',function(){
+            if(firstInput.value===""|| secondInput.value===""){
+                alert("Please Enter the value");
+            }
+            else{
             a=Number(firstInput.value);
         b=Number(secondInput.value);
         let h=Math.sqrt((a*a)+(b*b));
         output.innerText="Area of the given sides is"+h.toFixed(2);
-        })
+       } })
         
     </script>
 </body>

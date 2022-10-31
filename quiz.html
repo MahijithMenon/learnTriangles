@@ -58,7 +58,7 @@
 </li> 
 </ol>
 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded m-auto" id="submit">Submit</button>
-<div class="m-5 text-teal-600" id="output"></div>
+<div class="m-5 bg-amber-200 " id="output"></div>
 </form>
     </div>
     <script>
@@ -75,7 +75,14 @@
                 }
                 index+=1;
             }
-            output.innerText="Your Score is "+ " "+ score;
+            if(score<3){
+                output.style.color="red"
+                output.innerText="Your Score is "+ " "+ score;
+            }
+            else{
+                output.style.color="green"
+                output.innerText="Your Score is "+ " "+ score;
+            }
             event.preventDefault();
 
         })
