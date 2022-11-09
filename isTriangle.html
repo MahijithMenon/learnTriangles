@@ -37,8 +37,14 @@
         let angle3=document.getElementById('angle3')
         let result=document.getElementById('result')
         function isTriangle(){
+            
             if(angle1.value===""|| angle2.value===""||angle3.value===""){
                 alert("Please Enter the value");
+            }
+            else if(Number(angle1.value<=0)|| Number(angle2.value<=0)||Number(angle3.value<=0)){
+                result.innerText="Values can not be zero or negative";
+                result.style.color="red";
+                result.style.font="bold";
             }
             else{
             if(Number(angle1.value)+Number(angle2.value)+Number(angle3.value)===180){

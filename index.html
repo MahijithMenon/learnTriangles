@@ -27,7 +27,7 @@
         <label for="third">Enter Third side of a triangle</label>
         <input type="number" id="third">
         <button  id="calculate" class="bg-blue-500 w-40 justify-center hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-auto mt-5">Calculate</button>
-        <p id="output"></p>
+        <p id="output" class="m-auto"></p>
     </div>
     <script>
         const firstInput=document.getElementById('first')
@@ -35,16 +35,20 @@
         const thirdInput=document.getElementById('third')
         const calculate=document.getElementById('calculate');
         calculate.addEventListener('click',function(){
-            if(firstInput.value===""|| secondInput.value===""||thirdInput.value===""){
-                alert("Please Enter the value");
+            if(Number(firstInput.value<=0)|| Number(secondInput.value<=0) || Number(thirdInput.value<=0)){
+                output.style.color='red'
+                output.style.fontSize='40px'
+                output.innerText="Entered Value should not be negative and greater than zero ";
             }
             else{
             a=Number(firstInput.value);
-        b=Number(secondInput.value);
-        c=Number(thirdInput.value);
+            b=Number(secondInput.value);
+           c=Number(thirdInput.value);
         let s=(a+b+c)/2;
         let ar=Math.sqrt(s*(s-a)*(s-b)*(s-c));
-        output.innerText="Area of the given sides is"+ar.toFixed(2);
+        output.style.color='green'
+                output.style.fontSize='40px'
+        output.innerText="Area of the given sides is "+ar.toFixed(2);
         }})
         
     </script>
